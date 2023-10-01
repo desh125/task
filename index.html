@@ -11,27 +11,14 @@
     <h2>What really JS DO?</h2>
     <h2>What really JS DO?</h2>
     <hr>
-    <input class="form-control" type="text" name="cusName">
-    <button class="btn btn-danger mt-3">Test</button>
+    <input class="form-control" type="text" id="cusName">
+    <button class="btn btn-danger mt-3" id="updateButton">Test</button>
 </section>
 
-
 <script>
-    //so first of all we need to find a way to select DOM
-    //elements before changing them
-
-    //so what are the ways to select DOM elements.?
-    document.getElementById("element_id"); //will return single element
-    document.getElementsByName("name_attribute")//will return a list
-    document.getElementsByClassName("class_name");//will return a list
-    document.getElementsByTagName("element_name");//will return a list
-    document.querySelector("css_selector");//will return a single element
-    document.querySelectorAll("css_selector");//will return a list
-
-    document.getElementById("h1ID").addEventListener("click", function() {
-        document.querySelector("#h1ID").remove();
-      });
-
+    document.getElementById("updateButton").addEventListener("click", function() {
+        document.getElementById("h1ID").textContent = document.getElementById("cusName").value;
+    });
 </script>
 </body>
 </html>
