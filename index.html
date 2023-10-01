@@ -10,13 +10,6 @@
 <body>
 <section class="container mt-3">
     <section class="row">
-        <!--Case One-->
-        <div class="col">
-            <h1 id="head">Hello There How are you.?</h1>
-            <input id="txt" class="form-control" type="text" placeholder="Input Something">
-            <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
-        </div>
-
         <!--Case Two-->
         <div class="col">
             <h1>Input an Image Url</h1>
@@ -28,13 +21,10 @@
 </section>
 
 <script>
-    document.querySelector("#txt").addEventListener("keyup",function(){
-        document.querySelector("#head").innerText=document.querySelector("#txt").value;
-    });
-    document.querySelector("#btn1").addEventListener("click",function(){
-        document.querySelector("#head").style.color='red';
-    });
 
+    document.getElementById("btn2").addEventListener("click", function() {
+        document.getElementById("img").innerHTML = '<img src="' + document.getElementById("url").value + '">';
+    });
 </script>
 </body>
 </html>
