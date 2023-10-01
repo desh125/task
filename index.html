@@ -22,8 +22,8 @@
 
 <script>
 
-    document.getElementById("btn2").addEventListener("click", function() {
-        document.getElementById("img").innerHTML = '<img src="' + document.getElementById("url").value + '">';
+    document.querySelector('#btn2').addEventListener("click",function(){
+        document.querySelector('#img').style.backgroundImage = "url("+document.querySelector('#url').value+")";
     });
 </script>
 </body>
