@@ -1,24 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DOM</title>
-    <link rel="stylesheet" href="asets/css/bootstrap.css">
+    <title>Tasks</title>
+    <link rel="icon" href="assets/img/logo/checklist.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
 </head>
 <body>
-<section class="container mt-5">
-    <h1 id="h1ID">What is BOM & What is DOM</h1>
-    <h2>What really JS DO?</h2>
-    <h2>What really JS DO?</h2>
-    <hr>
-    <input class="form-control" type="text" id="cusName">
-    <button class="btn btn-danger mt-3" id="updateButton">Test</button>
+<section class="container mt-3">
+    <section class="row">
+        <!--Case One-->
+        <div class="col">
+            <h1 id="head">Hello There How are you.?</h1>
+            <input id="txt" class="form-control" type="text" placeholder="Input Something">
+            <button id="btn1" class="mt-2 btn btn-danger">Change Text</button>
+        </div>
+
+        <!--Case Two-->
+        <div class="col">
+            <h1>Input an Image Url</h1>
+            <input id="url" class="form-control" type="url" placeholder="Input Image URL">
+            <div id="img" style="height: 50vh" class="mt-2 border shadow"></div>
+            <button id="btn2" class="mt-2 btn btn-danger">Change Image</button>
+        </div>
+    </section>
 </section>
 
 <script>
-    document.getElementById("updateButton").addEventListener("click", function() {
-        document.getElementById("h1ID").innerText = document.getElementById("cusName").value;
+    document.querySelector("#txt").addEventListener("keyup",function(){
+        document.querySelector("#head").innerText=document.querySelector("#txt").value;
     });
+    document.querySelector("#btn1").addEventListener("click",function(){
+        document.querySelector("#head").style.color='red';
+    });
+
 </script>
 </body>
 </html>
